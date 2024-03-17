@@ -60,6 +60,7 @@ p1 = PersonTwo("John", 36)
 print('str')
 print(p1.name)
 
+# ********************* ^^ **********************
 class PersonThree:
   def __init__(self, name, age):
     self.name = name
@@ -72,3 +73,47 @@ p1 = PersonThree("John", 36)
 
 print('a')
 print(p1)
+
+# *************** start **************************************
+# Object Methods
+
+# Objects can also contain methods. Methods in objects are functions that belong to the object.
+
+# Let us create a method in the Person class:
+class PersonFour:
+  def __init__(self, name, age):
+    self.name = name
+    self.age = age
+
+  def myfuncFour(self):
+    print("Hello my name is " + self.name)
+
+print('al')
+p1 = PersonFour("John", 36)
+# p1.name = "40"
+p1.myfuncFour()
+# Note: The self parameter is a reference to the current instance of the class, and..
+# ..is used to access variables that belong to the class.
+
+# It does not have to be named "self" , you can call it whatever you like,..
+# ..but it has to be the first parameter of any function in the class:
+# *********************** end *******************************
+
+# Modify Object Properties
+# You can modify properties on objects like this:
+p1.age = 40
+
+
+# Delete Object Properties
+# You can delete properties on objects by using the del keyword:
+del p1.age
+
+# Delete Objects
+# You can delete objects by using the del keyword:
+del p1
+
+# The pass Statement
+# class definitions cannot be empty, but if you for some reason have a class definition..
+#  .. with no content, put in the pass statement to avoid getting an error.
+class Person:
+  pass
